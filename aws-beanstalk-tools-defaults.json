@@ -1,0 +1,22 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "net6.0",
+    "self-contained" : true,
+    "application"    : "TempleProject-1",
+    "environment"    : "TempleProject-1-dev",
+    "app-path"       : "/",
+    "iis-website"    : "Default Web Site",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-048a8859755460f8f,sg-06b706cc37c8769b4\";\"aws:ec2:vpc,Subnets\"=\"subnet-01637f394e6328093,subnet-047a94b451345c9f1,subnet-0bb1bc5814d7a6186,subnet-060215dee0e8efd13\"",
+    "solution-stack"       : "64bit Windows Server 2019 v2.8.0 running IIS 10.0",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "templeproject-1-dev",
+    "instance-type"        : "t1.micro",
+    "key-pair"             : "MyKeyPair",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
