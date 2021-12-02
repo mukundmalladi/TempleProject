@@ -16,6 +16,15 @@ namespace TempleProject.Pages.ViewModels
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password not Matched")]
         public string ConfirmPassword { get; set; } = string.Empty;
+
+        [Required]
+        [DataType(DataType.Text)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required]
+        [DataType(DataType.Text)]
+        public string LastName { get; set; } = string.Empty ;
+
        
     }
 }
