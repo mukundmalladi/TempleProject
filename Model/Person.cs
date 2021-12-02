@@ -1,4 +1,6 @@
-﻿namespace TempleProject.Model
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TempleProject.Model
 {
     public class Person
     {
@@ -17,10 +19,13 @@
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }
 
+        [NotMapped]
         public bool SmsSent { get => !string.IsNullOrEmpty(SmsSubmission); }
 
         public double AmountPaid { get; set; }
 
         public string Ghortram { get; set; } = string.Empty ;
+
+        public string OtherNames { get; set; } = string.Empty ;
     }
 }

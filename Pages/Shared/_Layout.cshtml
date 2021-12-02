@@ -35,35 +35,32 @@
                                    <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="./Person/Create">Submit Seva</a>
                                 </li>                                                              
-                        </ul>
-                        if (SignInManager.IsSignedIn(User))
-                        {
-                            var user = await UserManager.GetUserAsync(User);
-    var fullName = $"{user} {user.LastName}";
+                    </ul>
+                    if (SignInManager.IsSignedIn(User))
+                    {
+                        var user = await UserManager.GetUserAsync(User);
+                        var fullName = $"{user} {user.LastName}";
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+
+                            <li class="nav-item"><strong>Hello, @fullName ! </strong></li>                    
+                      
                             <li class="nav-item">
-        <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello, @fullName!</a>
-    </li>
-                            <div>
-                                Welcome <strong>@User?.Identity?.Name !!!</strong>  
-                            </div>
-                            <ul class="navbar-nav flex-column justify-content-end flex-grow-1">
-                            <li class="navbar-nav flex-column justify-content-end">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
                             </li>
-                            </ul>
+                        </ul>
 
-                        }
-                        else
-                        {
-                            <ul class="navbar-nav justify-content-end flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Register">Register</a>
-                                </li>
-                            </ul>
-                        }
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Register">Register</a>
+                            </li>
+                        </ul>
+                    }
 
                     }
                     
