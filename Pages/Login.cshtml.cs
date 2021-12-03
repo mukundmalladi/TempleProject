@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TempleProject.Model;
-using TempleProject.Pages.ViewModels;
 
 namespace TempleProject.Pages
 {
@@ -38,13 +37,5 @@ namespace TempleProject.Pages
             return Page();
         }
     }
-
-    public class MyHandler : IAuthorizationHandler
-    {
-        public Task HandleAsync(AuthorizationHandlerContext context)
-        {
-            var a = context.User;
-            throw new NotImplementedException();
-        }
-    }
+   
 }

@@ -40,4 +40,19 @@ namespace TempleProject.ThirdParty
             }
         }
     }
+
+    public class MockSentToSns : ISentToSns
+    {
+        private ILogger<SentToSns> logger;
+
+        public MockSentToSns(ILogger<SentToSns> logger)
+        {
+            this.logger = logger;
+        }
+
+        public Task<string> SendToSnsAsync(string phone, string message)
+        {
+            return Task.FromResult(Guid.NewGuid().ToString());
+        }
+    }
 }

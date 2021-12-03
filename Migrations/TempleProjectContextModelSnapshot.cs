@@ -173,7 +173,7 @@ namespace TempleProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Ghortram")
+                    b.Property<string>("Gothram")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

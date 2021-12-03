@@ -26,15 +26,27 @@
                 <label asp-for="Person.PhoneNumber" class="control-label"></label>
                 <input asp-for="Person.PhoneNumber" class="form-control" />
                 <span asp-validation-for="Person.PhoneNumber" class="text-danger"></span>
-            </div>   
-            
+            </div>               
             <div class="form-group">
                 <label asp-for="Person.TypeOfSeva" class="control-label"></label>
                 <input asp-for="Person.TypeOfSeva" class="form-control" />
                 <span asp-validation-for="Person.TypeOfSeva" class="text-danger"></span>
             </div>
-            <br />
-            <br />
+            <div class="form-group">
+                <label asp-for="Person.AmountPaid" class="control-label"></label>
+                <input asp-for="Person.AmountPaid" class="form-control" />
+                <span asp-validation-for="Person.AmountPaid" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label asp-for="Person.Gothram" class="control-label"></label>
+                <input asp-for="Person.Gothram" class="form-control" />
+                <span asp-validation-for="Person.Gothram" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label asp-for="Person.OtherNames" class="control-label"></label>
+                <input asp-for="Person.OtherNames" class="form-control" type = "text" />
+                <span asp-validation-for="Person.OtherNames" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

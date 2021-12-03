@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TempleProject.Model
 {
@@ -12,6 +10,6 @@ namespace TempleProject.Model
 
         public string FirstName { get; set; } = String.Empty;
 
-        public string LastName { get; set; } = String.Empty ;
+        public string LastName { get; set; } = String.Empty ;        
     }
 }

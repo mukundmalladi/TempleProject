@@ -15,8 +15,18 @@ try
 
     builder.Services.AddDbContext<TempleProjectContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("TempleProjectContext")));
+    builder.Services.AddSingleton<MyMemoryCache>();
 
-    builder.Services.AddTransient<ISentToSns, SentToSns>();
+
+    if (builder.Environment.IsDevelopment())
+    {
+        builder.Services.AddTransient<ISentToSns, MockSentToSns>();
+    }
+    else
+    {
+        builder.Services.AddTransient<ISentToSns, SentToSns>();
+    }
+    
     builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<TempleProjectContext>();
     builder.Services.ConfigureApplicationCookie(options =>
     {

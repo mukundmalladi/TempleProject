@@ -25,6 +25,12 @@ namespace TempleProject.Pages.ViewModels
         [DataType(DataType.Text)]
         public string LastName { get; set; } = string.Empty ;
 
-       
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; } = string.Empty;
     }
 }
