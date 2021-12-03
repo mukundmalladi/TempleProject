@@ -15,7 +15,7 @@ html {
 
 body {
     background-color: #cc9933;
-    background-image: url(https://srihariharapeetham.org/wp-content/uploads/2018/08/welcome-bg-old.png);
+    background-image: url("welcome-bg-old.png");
     background-position: center top;
     background-size: contain;
     background-repeat: no-repeat;
