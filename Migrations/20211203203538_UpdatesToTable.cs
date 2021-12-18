@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TempleProject.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class UpdatesToTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,6 +31,8 @@ namespace TempleProject.Migrations
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -63,7 +65,12 @@ namespace TempleProject.Migrations
                     PaymentGuid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SmsSubmission = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TypeOfSeva = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AmountPaid = table.Column<double>(type: "float", nullable: false),
+                    Gothram = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OtherNames = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

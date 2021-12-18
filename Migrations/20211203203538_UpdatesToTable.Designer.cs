@@ -12,8 +12,8 @@ using TempleProject.Data;
 namespace TempleProject.Migrations
 {
     [DbContext(typeof(TempleProjectContext))]
-    [Migration("20211127203813_AddDateToPerson")]
-    partial class AddDateToPerson
+    [Migration("20211203203538_UpdatesToTable")]
+    partial class UpdatesToTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -165,6 +165,9 @@ namespace TempleProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<double>("AmountPaid")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -172,7 +175,15 @@ namespace TempleProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Gothram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OtherNames")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -224,6 +235,14 @@ namespace TempleProject.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
